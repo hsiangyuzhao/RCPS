@@ -16,11 +16,12 @@ This repo contains the implementation of the proposed *Rectified Contrastive Pse
   year={2023}  
 }
 
-## Methods
-Update soon, please wait...
-
-## Results
-Update soon, please wait...
+## TODO
+:black_square_button: Provide code for data preparation  
+:white_check_mark: Publish model checkpoints  
+:black_square_button: Publish full training code  
+:black_square_button: Publish code for inference  
+:black_square_button: Add support for custom data training  
 
 ## Usage
 ### Data Preparation
