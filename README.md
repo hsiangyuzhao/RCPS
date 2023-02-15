@@ -27,7 +27,11 @@ Update soon, please wait...
 Update soon, please wait...
 
 ### Pretrained Checkpoint
-Update soon, please wait...
+#### Google Drive
+Link: https://drive.google.com/drive/folders/15-2oBw-11bNMhSCRxzLSHisTbyOcD3gv?usp=sharing  
+#### Baidu Netdisk
+Link：https://pan.baidu.com/s/1wNY06gOmxy8lZzcKiYVR-g?pwd=0512  
+Extraction Code (提取码)：0512  
 
 ### Training and Inference
 ```
