@@ -23,10 +23,17 @@ This repo contains the implementation of the proposed *Rectified Contrastive Pse
 :black_square_button: Publish code for inference  
 :black_square_button: Add support for custom data training  
 
-## Usage
+## Data 
+Following previous works, we have validated our method on two benchmark datasets, including 2018 Atrial Segmentation Challenge and NIH Pancreas dataset.  
+It should be noted that we do not have permissions to redistribute the data. Thus, for those who are interested, please follow the instructions below and process the data, or you will get a mismatching result compared with ours.
+### Data Download
+Atrial Segmentation: http://atriaseg2018.cardiacatlas.org/  
+Pancreas dataset: https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT
 ### Data Preparation
-Update soon, please wait...
+#### Data Split
+We split the data following previous works. Detailed split could be found in folder `data`.
 
+## Usage
 ### Pretrained Checkpoint
 #### Google Drive
 Link: https://drive.google.com/drive/folders/15-2oBw-11bNMhSCRxzLSHisTbyOcD3gv?usp=sharing  
@@ -43,4 +50,4 @@ CUDA_VISIBLE_DEVICES=$CUDA_DEVICE_NUMBER torchrun --nproc_per_node=$NUM_GPU eval
 ```
 
 ## Acknowledgement
-Our code is adapted from UAMT, SASSNet, DTC, URPC, MC-Net and SSL4MIS. Thanks these authors for their efforts in building the research community in semi-supervised medical image segmentation.
+Our code is adapted from [UAMT](https://github.com/yulequan/UA-MT), [SASSNet](https://github.com/kleinzcy/SASSnet), [DTC](https://github.com/HiLab-git/DTC), [URPC](https://github.com/HiLab-git/SSL4MIS), [MC-Net](https://github.com/ycwu1997/MC-Net) and [SSL4MIS](https://github.com/HiLab-git/SSL4MIS). Thanks these authors for their efforts in building the research community in semi-supervised medical image segmentation.
