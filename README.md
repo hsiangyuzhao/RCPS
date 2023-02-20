@@ -17,7 +17,7 @@ This repo contains the implementation of the proposed *Rectified Contrastive Pse
 }
 
 ## TODO
-:black_square_button: Provide code for data preparation  
+:white_check_mark: Provide code for data preparation  
 :white_check_mark: Publish model checkpoints  
 :black_square_button: Publish full training code  
 :black_square_button: Publish code for inference  
@@ -31,7 +31,11 @@ Atrial Segmentation: http://atriaseg2018.cardiacatlas.org/
 Pancreas dataset: https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT
 ### Data Preparation
 #### Data Split
-We split the data following previous works. Detailed split could be found in folder `data`.
+We split the data following previous works. Detailed split could be found in folder `data`, which are stored in .csv files.
+#### Data Preprocessing
+Download the data from the url above, then run the script `prepare_la_dataset.py` and `prepare_pancreas_dataset.py` by passing the argments of data location.
+### Custom Data Training
+Coming soon.
 
 ## Usage
 ### Pretrained Checkpoint
