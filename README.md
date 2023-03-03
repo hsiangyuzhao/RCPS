@@ -19,8 +19,8 @@ This repo contains the implementation of the proposed *Rectified Contrastive Pse
 ## TODO
 :white_check_mark: Provide code for data preparation  
 :white_check_mark: Publish model checkpoints  
-:black_square_button: Publish full training code  
-:black_square_button: Publish code for inference  
+:white_check_mark: Publish full training code  
+:white_check_mark: Publish code for inference  
 :black_square_button: Add support for custom data training  
 
 ## Data 
@@ -46,9 +46,11 @@ Link：https://pan.baidu.com/s/1wNY06gOmxy8lZzcKiYVR-g?pwd=0512
 Extraction Code (提取码)：0512  
 
 ### Training and Inference
+#### Training
 ```
 CUDA_VISIBLE_DEVICES=$CUDA_DEVICE_NUMBER torchrun --nproc_per_node=$NUM_GPU train.py --mixed --benchmark --task $TASK --exp_name $EXP_NAME --wandb --entity $USER_NAME
 ```
+#### Inference
 ```
 CUDA_VISIBLE_DEVICES=$CUDA_DEVICE_NUMBER torchrun --nproc_per_node=$NUM_GPU eval.py --mixed --benchmark --task $TASK --exp_name $EXP_NAME -pc $CKPT
 ```
