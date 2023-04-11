@@ -9,11 +9,11 @@ manuscript link:
 
 This repo contains the implementation of the proposed *Rectified Contrastive Pseudo Supervision* semi-supervised segmentation method on two public benchmarks in medical images.  
 **If you use our code, please cite the paper:**  
-> @article{zhao2023rcps,
-  title={RCPS: Rectified Contrastive Pseudo Supervision for Semi-Supervised Medical Image Segmentation},
-  author={Zhao, Xiangyu and Qi, Zengxin and Wang, Sheng and Wang, Qian and Wu, Xuehai and Mao, Ying and Zhang, Lichi},
-  journal={arXiv preprint arXiv:2301.05500},
-  year={2023}
+> @article{zhao2023rcps,  
+  title={RCPS: Rectified Contrastive Pseudo Supervision for Semi-Supervised Medical Image Segmentation},  
+  author={Zhao, Xiangyu and Qi, Zengxin and Wang, Sheng and Wang, Qian and Wu, Xuehai and Mao, Ying and Zhang, Lichi},  
+  journal={arXiv preprint arXi v:2301.05500},  
+  year={2023}  
 }
 
 ## TODO
