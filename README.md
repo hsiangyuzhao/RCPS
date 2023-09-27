@@ -2,13 +2,16 @@
 
 Official implementation of *Rectified Contrastive Pseudo Supervision in Semi-Supervised Medical Image Segmentation*  
 
+### :tada: Our work has been accepted by *IEEE Journal of Biomedical and Health Informatics*  
+
 **Authors:**  
 
 > Xiangyu Zhao, Zengxin Qi, Sheng Wang, Qian Wang, Xuehai Wu, Ying Mao, Lichi Zhang
 
 manuscript link:  
 
-- https://arxiv.org/abs/2301.05500 (preprint on arXiv)  
+- https://arxiv.org/abs/2301.05500 (first-edition preprint on arXiv)
+- Final version on IEEE JBHI will be available soon
 
 This repo contains the implementation of the proposed *Rectified Contrastive Pseudo Supervision (RCPS)* on two public benchmarks in medical images.  
 **If you find our work useful, please cite the paper:**  
@@ -37,8 +40,12 @@ It should be noted that we do not have permissions to redistribute the data. Thu
 
 #### Download
 
-Atrial Segmentation: http://atriaseg2018.cardiacatlas.org/  
-Pancreas dataset: https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT
+##### Atrial Segmentation: http://atriaseg2018.cardiacatlas.org/  
+- The above link seems to be out of service. You may find the data at: https://www.cardiacatlas.org/atriaseg2018-challenge/
+
+##### Pancreas dataset: https://wiki.cancerimagingarchive.net/display/Public/Pancreas-CT
+- If you encounter issues downloading the data, you may find the same data at : https://academictorrents.com/details/80ecfefcabede760cdbdf63e38986501f7becd49
+- Please note that the orientation of the data downloaded from this link is not correct, please correct them manually.
 
 #### Data Split
 
