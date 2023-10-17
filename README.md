@@ -10,8 +10,8 @@ Official implementation of *Rectified Contrastive Pseudo Supervision in Semi-Sup
 
 manuscript link:  
 
-- https://arxiv.org/abs/2301.05500 (first-edition preprint on arXiv)
-- Final version on IEEE JBHI will be available soon
+- https://arxiv.org/abs/2301.05500
+- https://ieeexplore.ieee.org/document/10273222
 
 This repo contains the implementation of the proposed *Rectified Contrastive Pseudo Supervision (RCPS)* on two public benchmarks in medical images.  
 **If you find our work useful, please cite the paper:**  
@@ -19,7 +19,8 @@ This repo contains the implementation of the proposed *Rectified Contrastive Pse
 > @article{zhao2023rcps,  
 > title={RCPS: Rectified Contrastive Pseudo Supervision for Semi-Supervised Medical Image Segmentation},  
 > author={Zhao, Xiangyu and Qi, Zengxin and Wang, Sheng and Wang, Qian and Wu, Xuehai and Mao, Ying and Zhang, Lichi},  
-> journal={arXiv preprint arXi v:2301.05500},  
+> journal={IEEE Journal of Biomedical and Health Informatics},  
+> doi={10.1109/JBHI.2023.3322590},  
 > year={2023}  
 > }
 
