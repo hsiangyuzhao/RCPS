@@ -111,6 +111,19 @@ val_sampler = DistributedSampler(valset)
 ```
 By using `RealSemiSupervisionPipeline`, you could generate the corresponding training dataset, unlabeled dataset and test dataset, respectively. Then the training will be identical to LA or Pancreas dataset.
 
+#### What is the difference between real semi-supervised scene and changing label ratios?
+Actually, the difference between real semi-supervised scenarios and changing label ratios is that all of the training data in the later case is labeled (but some of them are treated as unlabeled data, **where their labels are ignored and never used for training**).
+
+- In the latter case (changing ratios), you could **evaluate the effectiveness of the semi-supervised algorithm and check its performance when changing the ratio of unlabeled data**;
+- In the former case (real semi-supervised scenario), you could use the algorithm to **enhance the segmentation performance compared with using merely labeled data**.
+
+But these two scenarios do NOT alter model effectiveness. Imagine these two cases:
+
+- 100 labeled images (labeled ratio is set to 10%)
+- 10 labeled images with 90 unlabeled ones
+
+The model should **yield very close performance in these two scenarios**, as essentially they are identical. 
+
 ## Usage
 
 ### Pretrained Checkpoint
