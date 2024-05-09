@@ -92,19 +92,18 @@ In this case, split your training and validation data under the root path of you
     - val_labels
 - unlabeled_root
     - train_images
-    - train_labels (an empty folder)
 ```
 The `train.py` file should be modified as follows:
 ```python
-data_pipeline = TrainValDataPipeline(labeled_root, 'labeled', label_ratio=1.0, random_seed=seed)
-unlabeled_pipeline = TrainValDataPipeline(unlabeled_root, 'unlabeled', label_ratio=1.0, random_seed=seed)
-trainset, _, valset = data_pipeline.get_dataset(train_aug, val_aug, cache_dataset=False)
-unlabeled_set, _, _ = unlabeled_pipeline.get_dataset(train_aug, val_aug, cache_dataset=False)
+from utils.iteration.load_data_v2 import RealSemiSupervisionPipeline
+...
+data_pipeline = RealSemiSupervisionPipeline(labeled_root, unlabeled_root)
+trainset, unlabeled_set, valset = data_pipeline.get_dataset(train_aug, val_aug, cache_dataset=False)
 train_sampler = DistributedSampler(trainset, shuffle=True)
 unlabeled_sampler = DistributedSampler(unlabeled_set, shuffle=True)
 val_sampler = DistributedSampler(valset)
 ```
-By defining two `data_pipeline` instances, you could generate the corresponding training dataset, unlabeled dataset and test dataset, respectively. Then the training will be identical to LA or Pancreas dataset.
+By using `RealSemiSupervisionPipeline`, you could generate the corresponding training dataset, unlabeled dataset and test dataset, respectively. Then the training will be identical to LA or Pancreas dataset.
 
 ## Usage
 
