@@ -71,7 +71,7 @@ def main():
     # define training & validation transforms
     train_aug = Compose([
         LoadImaged(keys=['image', 'label'], allow_missing_keys=True),
-        AddChanneld(keys=['image', 'label'], allow_missing_keys=True),
+        EnsureChannelFirstd(keys=['image', 'label'], allow_missing_keys=True),
         NormalizeIntensityd(keys=['image'], allow_missing_keys=False),
         EnsureTyped(keys=['image', 'label'], allow_missing_keys=True),
         RandGridDistortiond(keys=['image', 'label'], allow_missing_keys=True, mode=['bilinear', 'nearest'],
@@ -82,7 +82,7 @@ def main():
 
     val_aug = Compose([
         LoadImaged(keys=['image', 'label'], allow_missing_keys=True),
-        AddChanneld(keys=['image', 'label'], allow_missing_keys=True),
+        EnsureChannelFirstd(keys=['image', 'label'], allow_missing_keys=True),
         NormalizeIntensityd(keys=['image'], allow_missing_keys=False),
         EnsureTyped(keys=['image', 'label'], allow_missing_keys=True),
     ])
