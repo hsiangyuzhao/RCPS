@@ -68,7 +68,8 @@ Our RCPS could be extended to other datasets with some modifications.
 
 #### Training with different label ratio
 
-In this scenario, all of the training images are labeled. Semi-supervised learning is deployed to investigate model performance with different labeled data ratio.  
+In this scenario, all of the training images are labeled. Semi-supervised learning is deployed to **investigate model performance with different labeled data ratio**.  
+
 In this case, split your training and validation data under the root path of your data storage. The expected structure of data storage is listed below:
 
 ```
@@ -78,9 +79,12 @@ In this case, split your training and validation data under the root path of you
     - val_images
     - val_labels
 ```
+
+Note that all of the images should be labeled. If some images are viewed as "unlabeled", their segmentation label remain untouched during training, i.e., the labels are not utilized to supervise the training.
+
 #### Training in real semi-supervision scenario
 
-In this scenario, some of the training images are unlabeled.  
+In this scenario, some of the training images are unlabeled. You are **using semi-supervised learning to enhance segmentation performance**.
 
 In this case, split your training and validation data under the root path of your data storage. The expected structure of data storage is listed below:
 
@@ -93,6 +97,8 @@ In this case, split your training and validation data under the root path of you
 - unlabeled_root
     - train_images
 ```
+In `labeled_root`, you should store labeled training and validation data; in `unlabeled_root`, you should store your extra unlabeled data.
+
 The `train.py` file should be modified as follows:
 ```python
 from utils.iteration.load_data_v2 import RealSemiSupervisionPipeline
