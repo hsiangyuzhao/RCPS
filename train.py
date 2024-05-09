@@ -92,7 +92,7 @@ def main():
     image_root, num_classes, class_names, affine, = prepare_experiment(args.task)
     save_dir, metric_savedir, infer_save_dir, vis_save_dir = makedirs(args.task, full_exp_name, save_root_path)
     # define dataset
-    data_pipeline = TrainValDataPipeline(image_root, 'labeled', label_ratio=ratio, random_seed=seed)
+    data_pipeline = TrainValDataPipeline(image_root, label_ratio=ratio, random_seed=seed)
     trainset, unlabeled_set, valset = data_pipeline.get_dataset(train_aug, val_aug, cache_dataset=False)
     train_sampler = DistributedSampler(trainset, shuffle=True)
     unlabeled_sampler = DistributedSampler(unlabeled_set, shuffle=True)
